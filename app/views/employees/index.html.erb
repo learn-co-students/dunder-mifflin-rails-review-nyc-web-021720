@@ -1,0 +1,12 @@
+<h1>All Employees</h1>
+
+<% @employees.each do |employee| %>
+<li>
+<%=link_to "#{employee.first_name}  #{employee.last_name}", employee  %> 
+<%= link_to "Edit", edit_employee_path(employee) %>
+</li>
+<% end %>
+<br>
+<%= button_to "Create an Employee", new_employee_path, method: :get %>
+
+<%= link_to "See all the dogs", dogs_path %>
